@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.btn-login {
+    background-color: #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a.btn-register {
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.slider {
+    height: 500px;
+    background: url('exam-slider.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.slider h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.slider p {
+    font-size: 20px;
+}
+
+.btn-start {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.about, .register {
+    background-color: #fff;
+    text-align: center;
+}
+
+.exams {
+    background-color: #f9f9f9;
+}
+
+.exam-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.exam-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.exam-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.exam-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-exam {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #28a745;
+    text-decoration: none;
+}
