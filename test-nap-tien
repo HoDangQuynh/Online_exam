@@ -1,0 +1,254 @@
+{
+  "id": "db2bf2c1-a394-446b-9f03-a3346c38daf3",
+  "version": "2.0",
+  "name": "test nap tien",
+  "url": "https://sin88.mn/user/deposit?tab=index",
+  "tests": [{
+    "id": "aa0e1880-5043-492d-86a2-aae3c3539d19",
+    "name": "TC-1",
+    "commands": [{
+      "id": "4889eef0-0855-4315-80f8-306b12318dac",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4c5f5c5-3882-4e05-8d56-e184f893eac6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.content > .item:nth-child(1)",
+      "targets": [
+        ["css=.content > .item:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[3]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91397532-5f85-4f4b-b448-21f527869065",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-create-qr > img",
+      "targets": [
+        ["css=.btn-create-qr > img", "css:finder"],
+        ["xpath=//img[@alt='icon-qrcode']", "xpath:img"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]/img", "xpath:idRelative"],
+        ["xpath=//div[5]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2d508b5-0453-4eb1-8c8d-e891adc3d34c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-cancel",
+      "targets": [
+        ["css=.btn-cancel", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7713e269-0894-45a8-b801-39882ce7ae95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swal2-cancel",
+      "targets": [
+        ["css=.swal2-cancel", "css:finder"],
+        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'ĐỒNG Ý')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a7b706c4-934f-4b9f-9900-62971693544c",
+    "name": "TC-2",
+    "commands": [{
+      "id": "77182c0b-cd22-47fa-9f21-30cceaa28ab6",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5debe11-05e8-4f62-ae7e-8be5e690cabb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-input",
+      "targets": [
+        ["css=.custom-input", "css:finder"],
+        ["xpath=//input[@type='tel']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc9aa602-ce23-4b31-aa55-ad0734d027da",
+      "comment": "",
+      "command": "type",
+      "target": "css=.custom-input",
+      "targets": [
+        ["css=.custom-input", "css:finder"],
+        ["xpath=//input[@type='tel']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "79b0dc29-72dc-4e98-ab39-92e216501811",
+      "comment": "",
+      "command": "click",
+      "target": "css=.content-error > p",
+      "targets": [
+        ["css=.content-error > p", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[2]/div[2]/p", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[2]/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Số tiền phải từ 50 đ - 1.000.000 đ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82259810-e0e3-4447-a8d4-69fa579ad435",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb0c59e8-c30f-4f64-9f98-9aecf70e90f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "284c9179-593c-4361-87a6-8b120979fd1c",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e27d1253-2dd2-44d9-8990-ad63bcff352b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8b14f92-7089-4132-b77a-a1f4fba925ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a37ea36-c635-46a3-a66a-7369528ee233",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b215eddc-393b-4d86-9f12-8d8bccb7f356",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02845673-570e-4426-8af4-84dddf232129",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-notes",
+      "targets": [
+        ["css=.list-notes", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/section/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4823ee41-f8b6-4617-8ce3-999be4933ee3",
+    "name": "TC-3",
+    "commands": [{
+      "id": "2108223d-b63d-41f4-a09d-e5b9d87ebb84",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d3e2851-f4f5-4354-827b-cf50631c0bd2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-input",
+      "targets": [
+        ["css=.custom-input", "css:finder"],
+        ["xpath=//input[@type='tel']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8d0fa46-fe44-4f54-8135-aa9ac3b9effc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.box-top",
+      "targets": [
+        ["css=.box-top", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/section/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a54a9e0-9027-4e8a-9a75-495bef92af36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-create-qr",
+      "targets": [
+        ["css=.btn-create-qr", "css:finder"],
+        ["xpath=//div[@id='__BVID__169']/div/div/section/div/div/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6ec57589-ba70-4bcc-8817-4e8064935fc5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["aa0e1880-5043-492d-86a2-aae3c3539d19"]
+  }],
+  "urls": ["https://sin88.mn/user/deposit?tab=index"],
+  "plugins": []
+}
