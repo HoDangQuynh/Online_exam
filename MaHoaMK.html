@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mã Hóa Mật Khẩu</title>
+</head>
+<body>
+
+<h2>Mã Hóa Mật Khẩu</h2>
+
+<label for="matKhau">Mật Khẩu:</label>
+<input type="password" id="matKhau" required>
+<button onclick="maHoaMatKhau()">Mã Hóa Mật Khẩu</button>
+
+<p id="output"></p>
+
+<script>
+// Hàm để mã hóa mật khẩu bằng SHA-256
+async function maHoaMatKhau() {
+    const matKhau = document.getElementById("matKhau").value;
+
+    // Kiểm tra nếu mật khẩu rỗng
+    if (!matKhau) {
+        document.getElementById("output").innerText = "Vui lòng nhập mật khẩu.";
+        return;
+    }
+
+    const encoder = new TextEncoder();
+    const data = encoder.encode(matKhau);
+    const hash = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hash));
+    const matKhauDaMaHoa = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+    // Hiển thị mật khẩu đã mã hóa
+    document.getElementById("output").innerText = `Mật khẩu đã mã hóa: ${matKhauDaMaHoa}`;
+}
+</script>
+
+</body>
+</html>
