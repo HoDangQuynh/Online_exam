@@ -1,0 +1,125 @@
+-----------------------------------------------------------html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/SVdangnhap.css">
+    <title>Trang Chính - Sinh Viên</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="menu">
+            <div class="logo">
+                <img src="imge/PM-Logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="">Trang Chủ</a></li>
+                <li><a href="">Thông Tin Cá Nhân</a></li>
+                <li><a href="">Kỳ Thi</a></li>
+                <li><a href="">Tài Liệu Học Tập</a></li>
+                <li><a href="">Liên Hệ</a></li>
+                <li><a href="">Đăng Xuất</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Chào mừng bạn trở lại!</h1>
+            <div class="info-section">
+                <h2>Thông tin cá nhân</h2>
+                <p><strong>Tên:</strong> Nguyễn Văn A</p>
+                <p><strong>Mail:</strong> nguyen.vana@example.com</p>
+                <p><strong>Số điện thoại:</strong> 0123456789</p>
+            </div>
+            <div class="exam-section">
+                <h2>Các Kỳ Thi Sắp Tới</h2>
+                <ul>
+                    <li><strong>Kỳ Thi Toán Học</strong> - Ngày thi: 01/11/2024</li>
+                    <li><strong>Kỳ Thi Tiếng Anh</strong> - Ngày thi: 05/11/2024</li>
+                    <li><strong>Kỳ Thi Lịch Sử</strong> - Ngày thi: 10/11/2024</li>
+                </ul>
+            </div>
+            <div class="resource-section">
+                <h2>Tài Liệu Học Tập</h2>
+                <ul>
+                    <li><a href="">Tài liệu Toán Học</a></li>
+                    <li><a href="">Tài liệu Tiếng Anh</a></li>
+                    <li><a href="">Tài liệu Lịch Sử</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+----------------------------------------------------------------------------------css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.menu {
+    width: 250px; 
+    background-color: rgb(53, 120, 201); 
+    padding: 20px;
+    color: white; 
+}
+
+.logo img {
+    width: 100%; 
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.menu ul li a:hover {
+    text-decoration: underline; 
+}
+
+.content {
+    flex: 1; 
+    padding: 20px;
+}
+
+.content h1 {
+    color: rgb(53, 120, 201);
+}
+
+.info-section, .exam-section, .resource-section {
+    background-color: white; 
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.info-section h2, .exam-section h2, .resource-section h2 {
+    color: rgb(53, 120, 201);
+}
+
+.exam-section ul, .resource-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.exam-section ul li, .resource-section ul li {
+    margin: 10px 0;
+}
