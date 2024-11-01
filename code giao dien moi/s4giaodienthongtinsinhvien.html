@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="s4thongtinsinhvien.css">
+    <title>Thông Tin Cá Nhân - Sinh Viên</title>
+</head>
+<body>
+    <div class="profile">
+        <div class="menu">
+            <div class="logo">
+                <img src="imge/PM-Logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="s1giaodientrangchusinhvien.html">Trang Chủ</a></li>
+                <li><a href="s4giaodienthongtinsinhvien.html">Thông Tin Cá Nhân</a></li>
+                <li><a href="s6giaodienkythi.html">Kỳ Thi</a></li>
+                <li><a href="s5giaodientailieuhoctap.html">Tài Liệu Học Tập</a></li>
+                <li><a href="">Liên Hệ</a></li>
+                <li><a href="s1codegiaodientrangchu.html">Đăng Xuất</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Thông Tin Cá Nhân</h1>
+            <form class="profile-form">
+                <div class="form-group">
+                    <label for="name">Họ và Tên:</label>
+                    <input type="text" id="name" value="Nguyễn Văn A" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="nguyen.vana@example.com" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số Điện Thoại:</label>
+                    <input type="tel" id="phone" value="0123456789" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Ngày Sinh:</label>
+                    <input type="date" id="dob" value="2000-01-01" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="address">Địa Chỉ:</label>
+                    <input type="text" id="address" value="123 Đường ABC, TP.HCM" disabled>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="editBtn">Chỉnh Sửa</button>
+                    <button type="submit" id="saveBtn" style="display: none;">Lưu Thay Đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const editBtn = document.getElementById('editBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const inputs = document.querySelectorAll('.profile-form input');
+
+        editBtn.addEventListener('click', () => {
+            inputs.forEach(input => input.disabled = false);
+            editBtn.style.display = 'none';
+            saveBtn.style.display = 'inline';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Liệu Học Tập</title>
+    <link rel="stylesheet" href="s4thongtinsinhvien.css">
+    <script>
+        function displayDocuments() {
+            const classCode = document.getElementById("classCode").value;
+            const subjectCode = document.getElementById("subjectCode").value;
+            const documents = document.getElementsByClassName("document");
+
+            // Ẩn tất cả các tài liệu trước(không hiểu lắm phần này, check lại sau)
+            for (let doc of documents) {
+                doc.style.display = "none";
+            }
+
+            // Kiểm tra mã lớp và mã môn, sau đó hiển thị tài liệu phù hợp(code lỏ tham khảo để test thôi)
+            if (classCode === "TL1" && subjectCode === "STL1") {
+                document.getElementById("tailieu1").style.display = "block";
+            } else if (classCode === "TL2" && subjectCode === "STL2") {
+                document.getElementById("tailieu2").style.display = "block";
+            } else if (classCode === "TL3" && subjectCode === "STL3") {
+                document.getElementById("tailieu3").style.display = "block";
+            } else {
+                alert("Mã lớp hoặc mã môn không hợp lệ!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="profile">
+        <div class="menu">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" />
+            </div>
+            <ul>
+                <li><a href="s1giaodientrangchusinhvien.html">Trang Chủ</a></li>
+                <li><a href="s4giaodienthongtinsinhvien.html">Thông Tin Cá Nhân</a></li>
+                <li><a href="s6giaodienkythi.html">Kỳ Thi</a></li>
+                <li><a href="s5giaodientailieuhoctap.html">Tài Liệu Học Tập</a></li>
+                <li><a href="">Liên Hệ</a></li>
+                <li><a href="s1codegiaodientrangchu.html">Đăng Xuất</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Tài Liệu Học Tập</h1>
+            <div class="profile-form">
+                <!-- Form nhập mã lớp và mã môn(chú ý không lỗi) -->
+                <div class="form-group">
+                    <label for="classCode">Mã Lớp</label>
+                    <input type="text" id="classCode" name="classCode" placeholder="Nhập mã lớp">
+                </div>
+                <div class="form-group">
+                    <label for="subjectCode">Mã Môn</label>
+                    <input type="text" id="subjectCode" name="subjectCode" placeholder="Nhập mã môn">
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="displayDocuments()">Tìm Kiếm</button>
+                </div>
+
+                <!-- Tài liệu học tập tương ứng với lớp mã môn vauwf nhập trên -->
+                <div id="tailieu1" class="document" style="display:none;">
+                    <h2>Tài Liệu Thầy Phan Đức Tèo</h2>
+                    <ul>
+                        <li>
+                            <strong>Đạo đức nghề nghiệp</strong> - 
+                            <a href="https://đaoducnghenghiep">Link đến tài liệu</a>
+                        </li>
+                        <li>
+                            <strong>Toán đại cương A3</strong> - 
+                            <a href="https://toanA3">Link đến tài liệu</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="tailieu2" class="document" style="display:none;">
+                    <h2>Tài Liệu Cô Bành Thị Nở</h2>
+                    <ul>
+                        <li>
+                            <strong>Lý đại cương</strong> - 
+                            <a href="https:ly">Link đến tài liệu</a>
+                        </li>
+                        <li>
+                            <strong>Khoa học máy tính</strong> - 
+                            <a href="https:khoahocmaytinh">Link đến tài liệu</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="tailieu3" class="document" style="display:none;">
+                    <h2>Tài Liệu Thầy Nguyễn Văn Hùng</h2>
+                    <ul>
+                        <li>
+                            <strong>Hóa Học Hữu Cơ</strong> - 
+                            <a href="https:hoahoc">Link đến tài liệu</a>
+                        </li>
+                        <li>
+                            <strong>Phaps luật đại cương</strong> - 
+                            <a href="https://phapluat">Link đến tài liệu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

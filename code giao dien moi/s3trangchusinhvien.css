@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.menu {
+    width: 250px; 
+    background-color: rgb(53, 120, 201); 
+    padding: 20px;
+    color: white; 
+}
+
+.logo img {
+    width: 100%; 
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.menu ul li a:hover {
+    text-decoration: underline; 
+}
+
+.content {
+    flex: 1; 
+    padding: 20px;
+}
+
+.content h1 {
+    color: rgb(53, 120, 201);
+}
+
+.info-section, .exam-section, .resource-section {
+    background-color: white; 
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.info-section h2, .exam-section h2, .resource-section h2 {
+    color: rgb(53, 120, 201);
+}
+
+.exam-section ul, .resource-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.exam-section ul li, .resource-section ul li {
+    margin: 10px 0;
+}
