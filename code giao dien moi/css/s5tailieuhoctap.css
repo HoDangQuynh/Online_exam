@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; 
+}
+.profile {
+    display: flex;
+}
+
+.menu {
+    width: 250px;
+    height:100vmax;
+    background-color: rgb(53, 120, 201); 
+    color: white; 
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: white; 
+    text-decoration: none; 
+}

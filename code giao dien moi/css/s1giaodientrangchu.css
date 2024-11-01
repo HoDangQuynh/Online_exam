@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; 
+}
+
+.trangchu {
+    width: 100%;
+    height: auto;
+}
+
+.menu {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(53, 120, 201);
+}
+
+.up {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.up ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.up ul li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px 15px;
+}
+
+.logo {
+    height: 95px; 
+}
+
+.up ul li a {
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+.up ul li a:hover {
+    color: #ffcc00; 
+}
+
+.giaodien {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto; 
+    width: 80%; 
+}
+
+.giaodien h1 {
+    font-size: 32px;
+    color: rgb(53, 120, 201);
+    margin-bottom: 20px;
+}
+
+.giaodien p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.features {
+    margin: 40px 0;
+}
+
+.features h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: rgb(53, 120, 201);
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333; 
+}
+
+.cta {
+    margin-top: 20px;
+}
+
+.btn-start {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgb(53, 120, 201);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s; 
+}
+
+.btn-start:hover {
+    background-color: darkblue; 
+}
+
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgb(53, 120, 201);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; 
+}

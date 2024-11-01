@@ -1,0 +1,179 @@
+--------------------------------------------------------------------------------------------------html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <h1>Login</h1>
+            <label for="email">Email</label> <br>
+            <input type="email" id="email" placeholder="Enter your email" required> <br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" placeholder="Enter your password" required> <br>
+            <a href="#" class="link forgot" target="_blank">Forgot password?</a> <br>
+            <input type="submit" value="Login" class="btn"> <br>
+            <label>Don't have an account?</label><a href="#" class="link">Sign up</a> <br>
+            <div class="divider">
+                <span></span><span>Or</span><span></span>
+            </div>
+            <a href="#" class="btn face">Login with Facebook</a> <br>
+            <a href="#" class="btn google">Login with Google</a> <br>
+            <a href="#" class="btn apple">Login with Apple</a> <br>
+            <a href="#" class="btn spotify">Login with Spotify</a> <br>
+        </form>
+    </div>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #4070f4;
+}
+
+.container {
+    background-color: #FFF;
+    max-width: 40rem;
+    margin: 4rem auto;
+    padding: 2.4rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2.4rem;
+    font-size: 2.4rem;
+    color: #333;
+}
+
+input {
+    width: 90%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid #777;
+    margin-bottom: 1.8rem;
+}
+
+input[type="submit"] {
+    background-color: #0171d3;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+label {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.link {
+    color: #256cf0;
+    margin-left: 0.8rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.divider span {
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.divider span:first-child, 
+.divider span:last-child {
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+.forgot{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #256cf0;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    width: 90%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid #777;
+    margin-bottom: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.face {
+    background-color: #0C6FF9;
+    color: #FFF;
+    margin: 2rem;
+    background-image: url(../imge/icons8-facebook-48.png);
+    background-repeat: no-repeat ;
+    background-size: 35px;
+    background-position: 3px ;
+}
+
+.google {
+    color: #555;
+    background-image: url(../imge/icons8-google-48.png);
+    background-repeat: no-repeat ;
+    background-size: 35px;
+    background-position: 3px ;
+}
+
+.apple {
+    background-color: #0c0404;
+    color: #FFF;
+    background-image: url(../imge/icons8-apple-64.png);
+    background-repeat: no-repeat ;
+    background-size: 35px;
+    background-position: 3px ;
+}
+
+.spotify {
+    background-color: #1DB954;  /* Nền màu xanh lá của Spotify */
+    color: #FFF;  /* Màu chữ trắng để nổi bật trên nền */
+    background-image: url(../imge/icons8-spotify-24.png);  /* Logo Spotify */
+    background-repeat: no-repeat;  /* Không lặp lại logo */
+    background-size: 30px;  /* Điều chỉnh kích thước logo nhỏ hơn */
+    background-position: 10px center;  /* Căn logo cách trái 10px và ở giữa theo chiều dọc */
+    padding-left: 50px;  /* Thêm khoảng trống bên trái để logo và văn bản không chồng lên nhau */
+    transition: background-color 0.3s ease;  /* Hiệu ứng chuyển màu mượt khi hover */
+}
+
+.spotify:hover {
+    background-color: #17a444;  /* Màu xanh đậm hơn khi hover */
+}
+
