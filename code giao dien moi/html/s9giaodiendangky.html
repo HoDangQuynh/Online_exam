@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/s9dangky.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <h1>Đăng Ký</h1>
+            <label for="contact">Số điện thoại hoặc Email</label>
+            <input type="text" id="contact" placeholder="Nhập số điện thoại hoặc email" required>
+            <label for="firstname">Mật khẩu</label>
+            <input type="text" id="matkhau" placeholder="Nhập mật khẩu" required> 
+
+            <label for="nhaplaimatakhau">Nhập lại mật khẩu</label>
+            <input type="text" id="nhaplaimatkhau" placeholder="Nhập lại mật khẩu" required> 
+
+             
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="teacher" name="role" >
+                    <label for="teacher">giáo viên</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="student" name="role" >
+                    <label for="student">học sinh</label>
+                </div>
+            </div>
+
+            <input type="submit" value="Đăng Ký" class="btn">
+        </form>
+    </div>
+</body>
+</html>
