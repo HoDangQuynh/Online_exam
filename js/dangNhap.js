@@ -1,48 +1,25 @@
-const express = require('express');
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    const errorMessage = document.querySelector(".error-message");
 
-const app = express();
-const port = 3000;
+    // Tài khoản mẫu
+    const sampleAccount = {
+        email: "test@example.com",
+        password: "123456"
+    };
 
-// Cấu hình cơ sở dữ liệu
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'your_username', // Thay bằng tên người dùng MySQL của bạn
-    password: 'your_password', // Thay bằng mật khẩu MySQL của bạn
-    database: 'thi_online'
-});
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Ngăn không cho trang load lại
 
-db.connect(err => {
-    if (err) throw err;
-    console.log('Connected to database');
-});
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-
-// API đăng nhập
-app.post('/code giao dien moi/html/s2giaodiendangnhap.html', (req, res) => {
-    const { email, password } = req.body;
-
-    const query = 'SELECT * FROM users WHERE email = ? AND password = ?';
-    db.query(query, [email, password], (err, results) => {
-        if (err) {
-            return res.status(500).json({ error: 'Database error' });
-        }
-        if (results.length > 0) {
-            // Đăng nhập thành công
-            res.json({ success: true, role: results[0].role });
+        if (email === sampleAccount.email && password === sampleAccount.password) {
+            errorMessage.style.display = "none";
+            window.location.href = "/code giao dien moi/html/s3giaodientrangchusinhvien.html";
         } else {
-            // Đăng nhập thất bại
-            res.status(401).json({ success: false });
+            errorMessage.textContent = "Login failed! Incorrect email or password.";
+            errorMessage.style.display = "block"; 
         }
     });
-});
-
-// Khởi động máy chủ
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
 });
