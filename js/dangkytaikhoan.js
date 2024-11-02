@@ -1,57 +1,36 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const signupForm = document.querySelector('form');
-    const contactInput = document.getElementById('contact');
-    const passwordInput = document.getElementById('matkhau');
-    const confirmPasswordInput = document.getElementById('nhaplaimatkhau');
-    const roleInputs = document.getElementsByName('role');
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    const errorMessage = document.querySelector(".error-message");
 
-    signupForm.addEventListener('submit', async function (event) {
-        event.preventDefault();
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Ngăn không cho form tải lại trang
 
-        const contact = contactInput.value;
-        const password = passwordInput.value;
-        const confirmPassword = confirmPasswordInput.value;
-        let role = "";
+        // Lấy giá trị của các trường
+        const contact = document.getElementById("contact").value;
+        const matkhau = document.getElementById("matkhau").value;
+        const nhaplaimatkhau = document.getElementById("nhaplaimatkhau").value;
+        const teacherRadio = document.getElementById("teacher");
+        const studentRadio = document.getElementById("student");
 
-        // Kiểm tra mật khẩu và nhập lại mật khẩu khớp nhau
-        if (password !== confirmPassword) {
-            alert("Mật khẩu không khớp. Vui lòng nhập lại.");
-            return;
-        }
+        // Kiểm tra các điều kiện
+        if (!contact) {
+            errorMessage.textContent = "Vui lòng nhập số điện thoại hoặc email.";
+            errorMessage.style.display = "block";
+        } else if (!matkhau) {
+            errorMessage.textContent = "Vui lòng nhập mật khẩu.";
+            errorMessage.style.display = "block";
+        } else if (matkhau !== nhaplaimatkhau) {
+            errorMessage.textContent = "Mật khẩu nhập lại không khớp.";
+            errorMessage.style.display = "block";
+        } else if (!teacherRadio.checked && !studentRadio.checked) {
+            errorMessage.textContent = "Vui lòng chọn vai trò (giáo viên hoặc học sinh).";
+            errorMessage.style.display = "block";
+        } else {
+            errorMessage.style.display = "none"; // Ẩn thông báo lỗi nếu đăng ký thành công
+            alert("Đăng ký thành công!");
 
-        // Lấy role (giáo viên hoặc học sinh)
-        for (const roleInput of roleInputs) {
-            if (roleInput.checked) {
-                role = roleInput.id;
-                break;
-            }
-        }
-
-        if (!role) {
-            alert("Vui lòng chọn vai trò.");
-            return;
-        }
-
-        try {
-            const response = await fetch('http://localhost:3000/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ contact, password, role })
-            });
-
-            const result = await response.json();
-            if (response.ok) {
-                alert(result.message);
-                // Có thể điều hướng đến trang đăng nhập
-                window.location.href = "/login.html";
-            } else {
-                alert(result.message);
-            }
-        } catch (error) {
-            alert("Đã xảy ra lỗi kết nối tới server.");
-            console.error(error);
+            // Chuyển hướng tới trang đăng nhập
+            window.location.href = "s2giaodienDangNhap.html"; // Đường dẫn tới form đăng nhập
         }
     });
 });
