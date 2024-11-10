@@ -11,7 +11,10 @@ body {
 .dashboard {
     display: flex;
 }
-
+.logo img {
+    width: 230px;
+    height: 185px; 
+}
 .menu {
     width: 250px; 
     background-color: rgb(53, 120, 201); 
@@ -19,9 +22,7 @@ body {
     color: white; 
 }
 
-.logo img {
-    width: 100%; 
-}
+
 
 .menu ul {
     list-style: none;
@@ -38,7 +39,7 @@ body {
 }
 
 .menu ul li a:hover {
-    text-decoration: underline; 
+    color: rgb(251, 149, 23); 
 }
 
 .content {

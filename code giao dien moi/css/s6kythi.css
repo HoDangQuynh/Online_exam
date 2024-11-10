@@ -12,6 +12,11 @@ body {
     display: flex;
 }
 
+.logo img {
+    width: 230px;
+    height: 185px; 
+}
+
 .menu {
     width: 250px;
     height:100vmax;
@@ -31,6 +36,10 @@ body {
 .menu ul li a {
     color: white; 
     text-decoration: none; 
+}
+
+.menu ul li a:hover {
+    color: rgb(251, 149, 23);
 }
 .exam-list {
     display: flex;

@@ -20,7 +20,8 @@ body {
 }
 
 .logo img {
-    width: 100%; 
+    width: 230px;
+    height: 185px; 
 }
 
 .menu ul {
@@ -38,7 +39,7 @@ body {
 }
 
 .menu ul li a:hover {
-    text-decoration: underline;
+    color: rgb(251, 149, 23);
 }
 
 .content {

@@ -11,6 +11,11 @@ body {
     display: flex;
 }
 
+.logo img {
+    width: 250px;
+    height: 195px; 
+}
+
 .menu {
     width: 250px;
     height:100vmax;
