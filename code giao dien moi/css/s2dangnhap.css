@@ -107,7 +107,7 @@ a {
     background-color: #0C6FF9;
     color: #FFF;
     margin: 2rem;
-    background-image: url(../imge/icons8-facebook-48.png);
+    background-image: url(../image/icons8-facebook-48.png);
     background-repeat: no-repeat ;
     background-size: 35px;
     background-position: 3px ;
@@ -115,7 +115,7 @@ a {
 
 .google {
     color: #555;
-    background-image: url(../imge/icons8-google-48.png);
+    background-image: url(../image/icons8-google-48.png);
     background-repeat: no-repeat ;
     background-size: 35px;
     background-position: 3px ;
@@ -124,7 +124,7 @@ a {
 .apple {
     background-color: #0c0404;
     color: #FFF;
-    background-image: url(../imge/icons8-apple-64.png);
+    background-image: url(../image/icons8-apple-64.png);
     background-repeat: no-repeat ;
     background-size: 35px;
     background-position: 3px ;
@@ -133,7 +133,7 @@ a {
 .spotify {
     background-color: #1DB954;  /* Nền màu xanh lá của Spotify */
     color: #FFF;  /* Màu chữ trắng để nổi bật trên nền */
-    background-image: url(../imge/icons8-spotify-24.png);  /* Logo Spotify */
+    background-image: url(../image/icons8-spotify-24.png);  /* Logo Spotify */
     background-repeat: no-repeat;  /* Không lặp lại logo */
     background-size: 30px;  /* Điều chỉnh kích thước logo nhỏ hơn */
     background-position: 10px center;  /* Căn logo cách trái 10px và ở giữa theo chiều dọc */
@@ -143,4 +143,16 @@ a {
 
 .spotify:hover {
     background-color: #17a444;  /* Màu xanh đậm hơn khi hover */
+}
+
+.apple:hover{
+    background-color: #343534;
+}
+
+.google:hover{
+    background-color: #a49fb5;
+}
+
+.face:hover{
+    background-color: #8669e4
 }
