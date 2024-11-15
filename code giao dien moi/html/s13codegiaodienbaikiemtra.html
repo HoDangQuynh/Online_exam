@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý bài kiểm tra</title>
+    <link rel="stylesheet" href="/css/s12themhocsinh.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/image/PM-Logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="thongtin.html">Thông Tin Cá Nhân</a></li>
+                    <li><a href="quanlykithi.html">Quản Lý Kỳ Thi</a></li>
+                    <li><a href="s8giaodiendangtailieuhoctap.html">Tài Liệu Học Tập</a></li>
+                    <li><a href="#">Lớp học tập</a></li>
+                    <li><a href="#">Cài đặt</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="class-info">
+                <h2 class="class-title">Tên lớp học: Hóa</h2>
+                <p class="class-code">Mã lớp học: 12345</p>
+            </div>
+
+            <div class="tabs">
+                <a href="s12codegiaodienxemthanhvienlop.html" class="tab">Thành viên</a>
+                <a href="" class="tab">Đề thi ôn tập</a>
+                <a href="s13codegiaodiendethi.html" class="tab active">Bài kiểm tra</a>
+            </div>
+
+            <div class="content-section">
+                <!-- Search and Status Filter -->
+                <div class="search-bar">
+                    <div class="search-input">
+                        <input type="text" placeholder="Nhập từ khóa tìm kiếm...">
+                        <img src="/image/Search.png" alt="Tìm kiếm" class="search-icon">
+                    </div>
+                    <div class="status-filter">
+                        <select>
+                            <option value="upcoming">Sắp diễn ra</option>
+                            <option value="ongoing">Đang diễn ra</option>
+                            <option value="ended">Đã kết thúc</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Test Table -->
+                <div class="test-table">
+                    <div class="table-header">
+                        <span>Bài kiểm tra</span>
+                        <span>Bắt đầu</span>
+                        <span>Kết thúc</span>
+                        <span>Thời gian làm bài</span>
+                        <span>Điểm trung bình</span>
+                        <span>Thống kê kết quả</span>
+                    </div>
+
+                    <div class="table-body">
+                        <p>Không tìm thấy dữ liệu!</p>
+                    </div>
+                </div>
+
+                <!-- Footer with Pagination -->
+                <div class="footer">
+                    <div class="pagination">
+                        <span>Số hàng hiển thị trên trang: 
+                            <select>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                            </select>
+                        </span>
+                        <span class="page-controls">
+                            <button>&lt;</button>
+                            <span>1</span>
+                            <button>&gt;</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
