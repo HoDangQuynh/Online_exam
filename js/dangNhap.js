@@ -1,25 +1,43 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
-    const errorMessage = document.querySelector(".error-message");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const errorMessage = document.getElementById("error-message");
 
-    // Tài khoản mẫu
-    const sampleAccount = {
-        email: "test@example.com",
-        password: "123456"
-    };
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Ngăn không cho form tải lại trang khi submit
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Ngăn không cho trang load lại
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+        // Xóa thông báo lỗi trước khi kiểm tra
+        errorMessage.style.display = "none";
+        errorMessage.textContent = "";
 
-        if (email === sampleAccount.email && password === sampleAccount.password) {
+        // Kiểm tra tính hợp lệ của email
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            errorMessage.textContent = "Email không hợp lệ! Vui lòng nhập lại.";
+            errorMessage.style.display = "block";
+            return;
+        }
+
+        // Kiểm tra độ dài mật khẩu
+        if (password.length < 6) {
+            errorMessage.textContent = "Mật khẩu phải có ít nhất 6 ký tự!";
+            errorMessage.style.display = "block";
+            return;
+        }
+
+        // Kiểm tra thông tin đăng nhập (giả lập dữ liệu)
+        const validEmail = "user@example.com";
+        const validPassword = "password123";
+
+        if (email === validEmail && password === validPassword) {
             errorMessage.style.display = "none";
-            window.location.href = "/code giao dien moi/html/s3giaodientrangchusinhvien.html";
+            window.location.href = "s3giaodientrangchusinhvien.html"; 
         } else {
-            errorMessage.textContent = "Login failed! Incorrect email or password.";
-            errorMessage.style.display = "block"; 
+            errorMessage.textContent = "Email hoặc mật khẩu không đúng!";
+            errorMessage.style.display = "block";
         }
     });
 });
