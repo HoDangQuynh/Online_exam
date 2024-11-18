@@ -5,12 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorMessage = document.getElementById("error-message");
 
     form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Ngăn không cho form tải lại trang khi submit
+        event.preventDefault();
 
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
 
-        // Xóa thông báo lỗi trước khi kiểm tra
         errorMessage.style.display = "none";
         errorMessage.textContent = "";
 
@@ -21,20 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Kiểm tra độ dài mật khẩu
+        // Kiểm tra mật khẩu
         if (password.length < 6) {
             errorMessage.textContent = "Mật khẩu phải có ít nhất 6 ký tự!";
             errorMessage.style.display = "block";
             return;
         }
 
-        // Kiểm tra thông tin đăng nhập (giả lập dữ liệu)
-        const validEmail = "user@example.com";
-        const validPassword = "password123";
+        // Lấy danh sách người dùng từ localStorage
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const user = users.find(user => user.contact === email && user.password === password);
 
-        if (email === validEmail && password === validPassword) {
-            errorMessage.style.display = "none";
-            window.location.href = "s3giaodientrangchusinhvien.html"; 
+        if (user) {
+            window.location.href = "s3giaodientrangchusinhvien.html"; // Chuyển hướng sau khi đăng nhập
         } else {
             errorMessage.textContent = "Email hoặc mật khẩu không đúng!";
             errorMessage.style.display = "block";
