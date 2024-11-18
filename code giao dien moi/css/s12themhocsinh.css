@@ -104,7 +104,7 @@ body {
     background-color: #007bff; /* Gạch xanh */
 }
 
-
+/* Content Section */
 .content-section {
     background-color: #e9f3ff; /* Nền khác cho toàn bộ phần bảng và footer */
     padding: 20px;
@@ -156,6 +156,7 @@ body {
     background: linear-gradient(45deg, #5a4af9, #ff49c1);
 }
 
+/* Student Table */
 .student-table {
     margin-bottom: 20px;
 }
@@ -170,7 +171,7 @@ body {
 }
 
 .table-header {
-    background-color: #d1e7ff; /* Nền khác cho phần bảng */
+    background-color: #d1e7ff;
     font-weight: bold;
     color: #555;
     border-radius: 4px;
@@ -181,12 +182,13 @@ body {
     color: #777;
 }
 
+/* Footer and Pagination */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    background-color: #d1e7ff; /* Nền khác cho phần footer */
+    background-color: #d1e7ff;
     padding: 10px;
     border-radius: 4px;
 }
@@ -214,3 +216,34 @@ body {
     font-weight: bold;
     color: #333;
 }
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
