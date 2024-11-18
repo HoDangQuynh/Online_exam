@@ -1,55 +1,96 @@
 document.addEventListener("DOMContentLoaded", () => {
     const addStudentBtn = document.querySelector(".add-student-btn");
+    const modal = document.getElementById("addStudentModal");
+    const closeModal = document.getElementById("closeModal");
+    const addStudentForm = document.getElementById("addStudentForm");
+    const studentEmailInput = document.getElementById("studentEmail");
     const tableBody = document.querySelector(".table-body");
-    let studentData = []; // Dữ liệu sinh viên hiện tại
 
-    // Render lại bảng sau khi thêm sinh viên
-    const renderTable = () => {
-        tableBody.innerHTML = "";
+    // Hiển thị modal
+    addStudentBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
 
-        if (studentData.length === 0) {
+    // Đóng modal
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Lưu học sinh vào localStorage và cập nhật bảng
+    addStudentForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const email = studentEmailInput.value.trim();
+        if (!email) return;
+
+        const students = JSON.parse(localStorage.getItem("students")) || [];
+
+        // Kiểm tra tài khoản đã đăng ký chưa (trùng email)
+        const existingStudent = students.find(student => student.email === email);
+        if (existingStudent) {
+            // Nếu email tồn tại, thông báo và không thêm
+            alert("Tài khoản với email này đã được đăng ký!");
+            return;
+        }
+
+        // Kiểm tra xem tài khoản có tồn tại trong hệ thống không
+        const registeredStudents = JSON.parse(localStorage.getItem("registeredStudents")) || [];
+        const studentExists = registeredStudents.some(student => student.email === email);
+        if (studentExists) {
+            alert("Tài khoản này không tồn tại!");
+            return;
+        }
+
+        // Thêm học sinh mới vào danh sách
+        students.push({
+            email,
+            examsReviewed: 0,
+            reviewCount: 0,
+            avgScore: 0
+        });
+
+        localStorage.setItem("students", JSON.stringify(students));
+        studentEmailInput.value = ""; // Xóa input
+        modal.style.display = "none"; // Ẩn modal
+
+        updateStudentTable(); // Cập nhật bảng
+    });
+
+    // Cập nhật bảng hiển thị học sinh
+    function updateStudentTable() {
+        const students = JSON.parse(localStorage.getItem("students")) || [];
+
+        if (students.length === 0) {
             tableBody.innerHTML = `<p>Không tìm thấy dữ liệu!</p>`;
             return;
         }
 
-        studentData.forEach((student, index) => {
+        tableBody.innerHTML = ""; // Xóa nội dung cũ
+        students.forEach((student, index) => {
             const row = document.createElement("div");
             row.classList.add("table-row");
             row.innerHTML = `
-                <span>${index + 1}. ${student.name}</span>
+                <span>${index + 1}</span>
                 <span>${student.email}</span>
-                <span><button class="remove-btn">Xóa</button></span>
+                <span>${student.examsReviewed}</span>
+                <span>${student.reviewCount}</span>
+                <span>${student.avgScore}</span>
+                <span><button class="delete-btn" data-index="${index}">Xóa</button></span>
             `;
-            // Xử lý sự kiện xóa sinh viên
-            row.querySelector(".remove-btn").addEventListener("click", () => {
-                studentData.splice(index, 1);
-                renderTable();
-            });
             tableBody.appendChild(row);
         });
-    };
 
-    // Xử lý sự kiện thêm sinh viên
-    addStudentBtn.addEventListener("click", () => {
-        const name = prompt("Nhập tên tài khoản của sinh viên:");
-        const email = prompt("Nhập email của sinh viên:");
+        // Thêm sự kiện xóa học sinh
+        document.querySelectorAll(".delete-btn").forEach(btn => {
+            btn.addEventListener("click", (event) => {
+                const index = event.target.getAttribute("data-index");
+                students.splice(index, 1);
+                localStorage.setItem("students", JSON.stringify(students));
+                updateStudentTable();
+            });
+        });
+    }
 
-        // Kiểm tra tính hợp lệ của dữ liệu
-        if (!name || !email) {
-            alert("Tên và email không được để trống!");
-            return;
-        }
-        if (!/^\S+@\S+\.\S+$/.test(email)) {
-            alert("Email không hợp lệ!");
-            return;
-        }
-
-        // Thêm sinh viên mới vào danh sách
-        studentData.push({ name, email });
-        alert("Đã thêm thành viên mới thành công!");
-        renderTable();
-    });
-
-    // Khởi tạo danh sách trống
-    renderTable();
+    // Gọi khi tải trang
+    updateStudentTable();
 });
